@@ -1,11 +1,17 @@
 server:
   port: 1680
 
+data:
+  mongodb:
+    uri: mongodb://seu:seu@mongodb:27017/e-learning
+    authentication-database: admin
+    database: e-learning
+
 eureka:
- instance:
-   preferIpAddress: true
- client:
-   fetchRegistry: true
-   registerWithEureka: true
-   serviceUrl:
-     defaultZone: http://localhost:8989/eureka/
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8989/eureka/
