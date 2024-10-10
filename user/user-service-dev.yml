@@ -3,9 +3,7 @@ server:
 
 data:
   mongodb:
-    uri: mongodb://seu:seu@mongodb:27017/e-learning
-    authentication-database: admin
-    database: e-learning
+    uri: mongodb://localhost:27017/ok
 
 eureka:
   instance:
