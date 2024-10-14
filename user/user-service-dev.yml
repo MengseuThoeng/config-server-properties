@@ -1,6 +1,12 @@
 server:
   port: 1680
 
+  spring.data:
+    mongodb:
+      uri: mongodb://seu:seu@mongodb:27017/
+      authentication-database: admin
+      database: mongodb
+
 eureka:
   instance:
     preferIpAddress: true
