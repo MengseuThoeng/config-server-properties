@@ -3,7 +3,9 @@ server:
 
 data:
   mongodb:
-    uri: mongodb://localhost:27017/ok
+    uri: mongodb://seu:seu@mongodb:27017/
+    authentication-database: admin
+    database: mongodb
 
 eureka:
   instance:
