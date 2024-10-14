@@ -1,8 +1,6 @@
 server:
   port: 1680
 
-  
-
 eureka:
   instance:
     preferIpAddress: true
@@ -10,4 +8,4 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://localhost:8989/eureka/
+      defaultZone: http://eureka-server:8989/eureka/
