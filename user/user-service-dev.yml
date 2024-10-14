@@ -1,10 +1,6 @@
 server:
   port: 1680
 
-
-
-
-
 eureka:
   instance:
     preferIpAddress: true
