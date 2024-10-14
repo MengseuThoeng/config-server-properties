@@ -1,18 +1,9 @@
 server:
   port: 1680
 
-data:
-  mongodb:
-    uri: mongodb://seu:seu@mongodb:27017/
-    authentication-database: admin
-    database: mongodb
 
-config:
-  import: "optional:configserver:"
 
-cloud:
-  config:
-    uri: http://config-server:8888
+
 
 eureka:
   instance:
