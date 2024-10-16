@@ -23,9 +23,9 @@ security:
               - "refresh_token"
               - "client_credentials"
             redirect-uris:
-              - "http://127.0.0.1:8080/login/oauth2/code/oidc-client"
+              - "http://127.0.0.1:9000/login/oauth2/code/oidc-client"
             post-logout-redirect-uris:
-              - "http://127.0.0.1:8080/"
+              - "http://127.0.0.1:9000/"
             scopes:
               - "openid"
               - "profile"
@@ -33,13 +33,22 @@ security:
               - "address"
           require-authorization-consent: true
 
-datasource:
-  url: jdbc:postgresql://128.199.137.87:2345/oauth2
-  username: seu
-  password: 123
+spring.datasource:
+  url: jdbc:postgresql://localhost:5432/oauth2
+  username: postgres
+  password: 123456
   driver-class-name: org.postgresql.Driver
 
 server:
   port: 9000
   servlet:
     context-path: /identity
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8989/eureka/
